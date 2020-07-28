@@ -11,7 +11,9 @@
       {{/each}}
     </ul>
   </div>
+
   <div class="text-center">
+    <h2 class="text-black font-bold text-xl text-center mb-8">Waiting area</h2>
     <div class="text-center divide-y divide-black">
       <ul class="mb-20 mt-5 mx-6 text-left">
         {{#each burgers }}
@@ -65,7 +67,7 @@
     // Get the ID from the button.
     let id = {'id': $(this).attr("value")}
 
-    // Send the DELETE request.
+    // Send the UPDATE request.
     $.ajax("/", {
       type: "PUT",
       data: id

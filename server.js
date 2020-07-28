@@ -52,7 +52,7 @@ app.post("/", function(req, res) {
   });
 });
 
-// Update a plan
+// Update a devoured burger
 app.put("/", function(req, res) {
   connection.query("UPDATE burgers SET devoured = ? WHERE id = ?", [true, req.body.id], function(err, result) {
     if (err) {
