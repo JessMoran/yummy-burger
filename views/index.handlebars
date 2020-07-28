@@ -1,5 +1,6 @@
 <div class="grid grid-cols-2 divide-x divide-black w-1/2 pr-12">
   <div class="text-center">
+    <h2 class="text-black font-bold text-xl text-center">Devoured</h2>
     <ul class="mb-20 mt-5 mx-6 text-left">
       {{#each burgers }}
         {{#if devoured}}
@@ -50,9 +51,9 @@
         <div class="md:flex md:items-center">
           <div class="md:w-1/3"></div>
           <span class="text-sm px-4">
-      Enter a burger you want to eat!
-      **Click the submit button
-    </span>
+            Enter a burger you want to eat!
+            **Click the submit button
+          </span>
         </div>
       </form>
     </div>
@@ -60,7 +61,7 @@
 </div>
 <script type="text/javascript">
   //If user clicks on the city buttons the main functions run
-  $(".devoured").on("click", function(e) {
+  $(".devoured").on("click", function (e) {
     // Get the ID from the button.
     let id = {'id': $(this).attr("value")}
 
@@ -69,7 +70,7 @@
       type: "PUT",
       data: id
     }).then(
-            function() {
+            function () {
               console.log("updated id ", id);
               // Reload the page to get the updated list
               location.reload();
